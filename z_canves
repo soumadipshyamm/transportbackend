@@ -1,0 +1,52 @@
+Step 1:- Please add the HTML2CANVAS Cdn in your header file
+
+<!-- HTML 2 CANVAS CDN -->
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.esm.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.js"></script>
+
+
+Step 2:- Please add the id's on your content or button
+
+Step 3:- Now add the below script code in your file.
+
+<script type="text/javascript">
+
+   jQuery(document).ready(function(){
+       jQuery("#download").click(function(){
+		   screenshot();
+	   });
+   });
+
+   function screenshot(){
+	   html2canvas(document.getElementById("photo")).then(function(canvas){
+          downloadImage(canvas.toDataURL(),"UsersInformation.png");
+	   });
+   }
+
+   function downloadImage(uri, filename){
+	 var link = document.createElement('a');
+	 if(typeof link.download !== 'string'){
+        window.open(uri);
+	 }
+	 else{
+		 link.href = uri;
+		 link.download = filename;
+		 accountForFirefox(clickLink, link);
+	 }
+   }
+
+   function clickLink(link){
+	   link.click();
+   }
+
+   function accountForFirefox(click){
+	   var link = arguments[1];
+	   document.body.appendChild(link);
+	   click(link);
+	   document.body.removeChild(link);
+   }
+
+
+</script>

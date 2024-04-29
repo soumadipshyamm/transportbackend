@@ -1,0 +1,234 @@
+
+/**
+ * Login
+ * Method=> Post
+ */
+Link: http: //166.62.54.122/transportation/transportation_app/api/login
+
+Request: {
+    "email": "subadmin@abc.com",
+    "password": "12345678"
+}
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "User Details Found",
+    "data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5OTMwMzVjMC0xMzlmLTRjMzMtYmIyZC1iY2RhZTg1YzkyYjMiLCJqdGkiOiJkNDBjMWE4NmQ4YmZlOTU3OGJhYjFmNDQ1ZjU3YTZiOGQzOTQ4NzVmMDc5NmJjZDBjNjkwMmI2MjlmZDZjNWMyNWIyZjlmM2JmZmQxNDMwMyIsImlhdCI6MTY4NDM4OTA5My4xNzMxNTcsIm5iZiI6MTY4NDM4OTA5My4xNzMxNiwiZXhwIjoxNzE2MDExNDkzLjEyNTUwNywic3ViIjoiMiIsInNjb3BlcyI6W119.Xzm_wfjEW_wC0aOQLagssCbVMi1pcbXfP02Ahs9zNFUPaVDN5My0LxaaP928oYib8epxZrvz1hM2zZXOl5meMUadI6xIgIlC7T5T8IqvmuKvfOqSwkayjTukSvIJjlq6xryynh8-z_LKQh2GfguDCUF2dde5hCGhfksy4tQyjEMJee9tFSn32_EPI_02UOayLv8lPJDmq9F53jmrGfZycxWXXZJ4JjnSmM-8PFUZtBzNBzDKl_ModXjoVU6SKU219Y-X2Z4UD1VCohXtZXmoTGvtUyd8iknRvr8SUsQEPgYqKVNmYDeiw83XXkXGFigGweBny1tiXY0qPPm_SGPNDpiHvpcMfrwUarY58ZpzoRlNSj4v2hgZgh_pYR72aBwjTIF7ABch72xVNyIXRTs53YzL8nL9DApb0xxtHrYg4FVd10ohMn_UZqP-wUX6tUDVOREuLDTt0rMYXfDEZ85M7oZ5DBdaU_-9uwpXRiYuRyrdIS7J56KJpycGhzaqg3qG7hoFd0_IGHvaah8yR3VSqnO_659frecb8SgS_avNgvYMKz_OC52bSXFzAyfD_oJB_eGzHCU6oElyaIerF4ExA1fDCRhZHvtB5ze8xNaVoR95eAWN15d_97SJYZWnPypABB_x4bgZy8vQ-jAyfHPKsIQdQyUeRgx8ppzVnFr5k0g",
+        "user": {
+            "id": 2,
+            "uuid": null,
+            "name": "Supervisor 1",
+            "phone": 1234567890,
+            "email": "subadmin@abc.com",
+            "email_verified_at": null,
+            "type": 1,
+            "is_active": 1,
+            "created_at": "2023-05-17T11:52:56.000000Z",
+            "updated_at": "2023-05-17T11:52:56.000000Z"
+        }
+    }
+}
+/**
+ *Client List
+ *method=>post
+ */
+Link:http: //166.62.54.122/transportation/transportation_app/api/list
+Request:
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "Client Data Found",
+    "data": [
+        {
+            "id": 1,
+            "uuid": "d746873e-1c3b-40de-9846-6732fbb3614b",
+            "name": "cli1",
+            "email": "client@abc.com",
+            "phone": 1234567890,
+            "is_active": 0,
+            "created_at": "2023-05-17T11:51:39.000000Z",
+            "updated_at": "2023-05-17T11:51:39.000000Z",
+            "deleted_at": null
+        }
+    ]
+}
+/**
+ *Vehicle List
+ *POST
+ */
+Link:http: //166.62.54.122/transportation/transportation_app/api/vehiclelist
+
+Request:
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "Vehicle Data Found",
+    "data": [
+        {
+            "id": 1,
+            "uuid": "cf039dda-95af-4c54-a682-bf411f4d3d4c",
+            "type": "vehicle1",
+            "car_number": "wb03D3456",
+            "qr_code": "6464bfe69a967",
+            "vendor_id": 1,
+            "is_active": 0,
+            "created_at": "2023-05-17T11:52:06.000000Z",
+            "updated_at": "2023-05-17T11:52:06.000000Z",
+            "deleted_at": null
+        }
+    ]
+}
+/**
+*Vehicle list particuler cliend list
+*POST
+*/
+
+Link:http: //166.62.54.122/transportation/transportation_app/api/vehicle-wise-inoutList
+
+Request: {
+    "id": "1"
+}
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "Client Wise Vehicle Data Found",
+    "data": [
+        {
+            "id": 1,
+            "uuid": "44c85531-e6f5-44c6-8b48-8fa487097441",
+            "car_date": "2023-05-18",
+            "vehicles_id": 1,
+            "clients_id": 1,
+            "users_id": 1,
+            "in_time": "02:14:00",
+            "out_time": "01:16:00",
+            "in_time_img": null,
+            "out_time_img": null,
+            "is_active": 0,
+            "created_at": "2023-05-18T06:40:37.000000Z",
+            "updated_at": "2023-05-18T06:40:37.000000Z",
+            "deleted_at": null,
+            "clients": {
+                "id": 1,
+                "uuid": "d746873e-1c3b-40de-9846-6732fbb3614b",
+                "name": "cli1",
+                "email": "client@abc.com",
+                "phone": 1234567890,
+                "is_active": 0,
+                "created_at": "2023-05-17T11:51:39.000000Z",
+                "updated_at": "2023-05-17T11:51:39.000000Z",
+                "deleted_at": null
+            },
+            "vehical": {
+                "id": 1,
+                "uuid": "cf039dda-95af-4c54-a682-bf411f4d3d4c",
+                "type": "vehicle1",
+                "car_number": "wb03D3456",
+                "qr_code": "6464bfe69a967",
+                "vendor_id": 1,
+                "is_active": 0,
+                "created_at": "2023-05-17T11:52:06.000000Z",
+                "updated_at": "2023-05-17T11:52:06.000000Z",
+                "deleted_at": null
+            }
+        }
+    ]
+}
+/**
+*QR Code Scan
+*POST
+*/
+Link: http: //166.62.54.122/transportation/transportation_app/api/get-show-car-in-out-time/cf039dda-95af-4c54-a682-bf411f4d3d4c
+// InTime=>status=0
+Request: {
+    "status": "0",
+    "time": "20:14:00",
+    "car_date": "2023-05-19",
+    "users_id": "2",
+    "clients_id": "1",
+    "file": ""
+}
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "Vehicle Data Found",
+    "data": {
+        "uuid": "63551b0b-506e-4c9e-a2b4-1d8ff83f1eea",
+        "car_date": "2023-05-18T12:38:08.895862Z",
+        "users_id": 2,
+        "vehicles_id": 1,
+        "clients_id": "1",
+        "in_time": "20:14:00",
+        "in_time_img": "1684413488.png",
+        "updated_at": "2023-05-18T12:38:08.000000Z",
+        "created_at": "2023-05-18T12:38:08.000000Z",
+        "id": 15
+    }
+}
+// Out Time => status=1
+Request: {
+    "status": "1",
+    "time": "20:14:00",
+    "car_date": "2023-05-19",
+    "users_id": "2",
+    "clients_id": "1",
+    "file":''
+}
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "Car Time updated successfully",
+    "data": 1
+}
+/**
+*Password update
+*POST
+*/
+Link: http: //166.62.54.122/transportation/transportation_app/api/update-password
+Request: {
+    "current_password": "12345678",
+    "new_password": "1234567"
+}
+Response: {
+    "status": true,
+    "response_code": 200,
+    "message": "Password Changed Successfully",
+    "data": true
+}
+/**
+*Profile update with img
+*POST
+*/
+Link:http: //166.62.54.122/transportation/transportation_app/api/get-profile-update
+Request:
+{
+    "name":"Supervisor 1",
+   "phone":"123456789",
+   "file":'
+}
+Response:
+{
+    "status": true,
+    "response_code": 200,
+    "message": "Profile Updated successfully",
+    "data": true
+}
+
+
+/**
+*Profile Img update
+*POST
+*/
+Link:http: //166.62.54.122/transportation/transportation_app/api/get-profile-update-image
+Request:
+{
+   "file":""
+}
+Response:
+{
+    "status": true,
+    "response_code": 200,
+    "message": "Profile  Image Updated successfully",
+    "data": true
+}

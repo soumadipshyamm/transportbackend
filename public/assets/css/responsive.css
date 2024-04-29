@@ -1,0 +1,16 @@
+/* mobile view */
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .tableview-left{
+        flex-direction: column;
+    }
+    .tableview-left.add-modal .form-group{
+        width: 100%;
+    }
+    .tableview-left.add-modal .form-control {
+        width: 100%;
+    }
+}
